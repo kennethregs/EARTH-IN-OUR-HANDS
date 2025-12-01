@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EARTH IN OUR HANDS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Goblin+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Miniver&family=Momo+Trust+Display&family=Noto+Sans+KR:wght@100&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital@0;1&family=Rubik+80s+Fade&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="1_style.css" />
+</head>
+
+<body>
+  <header id="navbar">
+    <div class="container header-inner">
+      <div class="logo">EARTH IN OUR HANDS</div>
+
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav id="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="intro.html" class="active">Introduction</a>
+        <a href="problems.html">Problems</a>
+        <a href="objectives.html">Objectives</a>
+        <a href="program.html">Program</a>
+      </nav>
+    </div>
+  </header>
+
+  <!--CAROUSEL-->
+
+  <div class="carousel-wrapper">
+    <div id="earthCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <img src="slide1.jpg" class="d-block w-100" alt="Mitigation" />
+          <div class="overlay"></div>
+          <div class="carousel-caption d-none d-md-block">
+            <h1>Mitigation</h1>
+            <p>Reduce emissions through clean energy.</p>
+            <a href="#mitigation-section" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <img src="slide2.jpg" class="d-block w-100" alt="Global Policy" />
+          <div class="overlay"></div>
+          <div class="carousel-caption d-none d-md-block">
+            <h1>Global Policy</h1>
+            <p>International cooperation.</p>
+            <a href="#global-policy-section" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <img src="slide3.jpg" class="d-block w-100" alt="Adaptation" />
+          <div class="overlay"></div>
+          <div class="carousel-caption d-none d-md-block">
+            <h1>Adaptation & Resilience</h1>
+            <p>Build strong communities.</p>
+            <a href="objectives.html" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="carousel-item">
+          <img src="slide4.jpg" class="d-block w-100" alt="Individual Action" />
+          <div class="overlay"></div>
+          <div class="carousel-caption d-none d-md-block">
+            <h1>Individual & Local Action</h1>
+            <p>Everyone can help.</p>
+            <a href="program.html" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#earthCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#earthCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <section id="mitigation-section">
+    <h1>MITIGATION</h1>
+
+    <p class="section-desc">
+      Mitigation refers to strategies and actions aimed at reducing or
+      preventing greenhouse gas emissions to slow down global warming. It
+      addresses the root causes of climate change by promoting clean energy,
+      energy efficiency, forest protection, and sustainable technologies.
+      Effective mitigation helps protect ecosystems, reduce pollution, and
+      build a safer, more resilient future for all.
+    </p>
+
+    <div class="container">
+      <div class="row g-4">
+        <!-- 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="mitigation-card card p-3">
+            <img src="https://gridx.com/wp-content/uploads/2023/05/image7.jpg" alt="Renewable Energy" />
+            <div class="card-body">
+              <i class="bi bi-sun-fill"></i>
+              <h5 class="card-title mt-2">Renewable Energy</h5>
+              <ul>
+                <li>Solar, wind, hydropower</li>
+                <li>Reduces carbon emissions</li>
+                <li>Supports sustainable electricity</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="mitigation-card card p-3">
+            <img
+              src="https://comsite-s3.s3.ap-southeast-3.amazonaws.com/images/post/f9WtcfX4aKA8i2bGj1PisdqQxYMf3H1vTEMfOanl.webp"
+              alt="Energy Efficiency" />
+            <div class="card-body">
+              <i class="bi bi-lightning-fill"></i>
+              <h5 class="card-title mt-2">Energy Efficiency</h5>
+              <ul>
+                <li>Efficient appliances & buildings</li>
+                <li>Reduces wasted energy</li>
+                <li>Lowers emissions and costs</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="mitigation-card card p-3">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800" alt="Forest Protection" />
+            <div class="card-body">
+              <i class="bi bi-tree-fill"></i>
+              <h5 class="card-title mt-2">Forest & Nature Protection</h5>
+              <ul>
+                <li>Reforestation & afforestation</li>
+                <li>Protects biodiversity</li>
+                <li>Absorbs CO₂ naturally</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="mitigation-card card p-3">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJdHQoNlMv0KBA-9rBBDG-GNbQTsHVAMk64w&s"
+              alt="Sustainable Transport" />
+            <div class="card-body">
+              <i class="bi bi-bicycle"></i>
+              <h5 class="card-title mt-2">Sustainable Transport</h5>
+              <ul>
+                <li>Electric vehicles & public transport</li>
+                <li>Promotes walking & cycling</li>
+                <li>Reduces emissions</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="mitigation-card card p-3">
+            <img
+              src="https://i0.wp.com/bioenergyconsultant.com/wp-content/uploads/2024/10/waste-reduction-strategies.jpg"
+              alt="Waste Reduction" />
+            <div class="card-body">
+              <i class="bi bi-recycle"></i>
+              <h5 class="card-title mt-2">Waste Reduction</h5>
+              <ul>
+                <li>Recycling & composting</li>
+                <li>Reduces landfill pollution</li>
+                <li>Supports circular economy</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="mitigation-card card p-3">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDGSzh07Bblz7NvAD0nCjF4rxVOReBnuN3DA&s"
+              alt="Carbon Capture" />
+            <div class="card-body">
+              <i class="bi bi-building"></i>
+              <h5 class="card-title mt-2">Carbon Capture Technology</h5>
+              <ul>
+                <li>Captures industrial CO₂</li>
+                <li>Prevents emissions from entering atmosphere</li>
+                <li>Supports low-carbon future</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="global-policy-section">
+    <h1>GLOBAL POLICY</h1>
+
+    <p class="section-desc">
+      Global Policy focuses on international agreements, cooperation, and
+      actions taken by countries to address global issues such as climate
+      change, security, public health, and sustainable development. It
+      involves treaties, diplomacy, and coordinated strategies that ensure
+      nations work together toward a safer and more sustainable world.
+    </p>
+
+    <div class="container">
+      <div class="row g-4">
+        <!-- 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="mitigation-card card p-3">
+            <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=800" alt="Paris Agreement" />
+            <div class="card-body">
+              <i class="bi bi-globe"></i>
+              <h5 class="card-title mt-2">Paris Agreement</h5>
+              <ul>
+                <li>Global treaty to reduce emissions</li>
+                <li>Limit warming to 1.5°C</li>
+                <li>Signed by 190+ countries</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="mitigation-card card p-3">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800" alt="UN Climate Action" />
+            <div class="card-body">
+              <i class="bi bi-bank2"></i>
+              <h5 class="card-title mt-2">United Nations Climate Action</h5>
+              <ul>
+                <li>Global cooperation on climate goals</li>
+                <li>Supports countries in sustainability</li>
+                <li>Implements SDG 13 (Climate Action)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="mitigation-card card p-3">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800" alt="Climate Agreements" />
+            <div class="card-body">
+              <i class="bi bi-flag"></i>
+              <h5 class="card-title mt-2">International Agreements</h5>
+              <ul>
+                <li>Countries unite for global solutions</li>
+                <li>Promotes sustainable development</li>
+                <li>Ensures shared responsibilities</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="mitigation-card card p-3">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800" alt="Climate Finance" />
+            <div class="card-body">
+              <i class="bi bi-cash-stack"></i>
+              <h5 class="card-title mt-2">Climate Finance</h5>
+              <ul>
+                <li>Funds for climate adaptation & mitigation</li>
+                <li>Supports vulnerable countries</li>
+                <li>Promotes clean energy investments</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="mitigation-card card p-3">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800"
+              alt="International Cooperation" />
+            <div class="card-body">
+              <i class="bi bi-people-fill"></i>
+              <h5 class="card-title mt-2">International Cooperation</h5>
+              <ul>
+                <li>Nations working together</li>
+                <li>Shared environmental commitments</li>
+                <li>Creates unified global action</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="mitigation-card card p-3">
+            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800" alt="Policy Enforcement" />
+            <div class="card-body">
+              <i class="bi bi-shield-check"></i>
+              <h5 class="card-title mt-2">Policy Enforcement</h5>
+              <ul>
+                <li>Ensures rules are followed</li>
+                <li>Improves accountability</li>
+                <li>Strengthens climate action</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="five-ps-section">
+    <h1>THE FIVE P's OF GLOBAL POLICY</h1>
+
+    <p class="section-desc">
+      The Five P's represent the main tools governments use to guide public
+      behavior, manage resources, and strengthen international policy. These
+      include Prescriptive Regulation, Property Rights, Payments, Penalties,
+      and Persuasion — all working together to promote sustainable and
+      responsible global action.
+    </p>
+
+    <div class="container">
+      <div class="row g-4">
+        <!-- 1: Prescriptive Regulation -->
+        <div class="col-md-6 col-lg-4">
+          <div class="mitigation-card card p-3">
+            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800" alt="Prescriptive Regulation" />
+            <div class="card-body">
+              <i class="bi bi-journal-check"></i>
+              <h5 class="card-title mt-2">Prescriptive Regulation</h5>
+              <ul>
+                <li>Clear rules and required standards</li>
+                <li>Ensures environmental protection</li>
+                <li>Supports safety and compliance</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2: Property Rights -->
+        <div class="col-md-6 col-lg-4">
+          <div class="mitigation-card card p-3">
+            <img src="https://images.unsplash.com/photo-1462899006636-339e08d1844e?w=800" alt="Property Rights" />
+            <div class="card-body">
+              <i class="bi bi-house-check"></i>
+              <h5 class="card-title mt-2">Property Rights</h5>
+              <ul>
+                <li>Legal ownership of resources</li>
+                <li>Prevents overuse and misuse</li>
+                <li>Encourages responsible management</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3: Payments -->
+        <div class="col-md-6 col-lg-4">
+          <div class="mitigation-card card p-3">
+            <img src="https://images.unsplash.com/photo-1604594849809-dfedbc827105?w=800" alt="Payments" />
+            <div class="card-body">
+              <i class="bi bi-cash-stack"></i>
+              <h5 class="card-title mt-2">Payments</h5>
+              <ul>
+                <li>Financial incentives for action</li>
+                <li>Promotes clean and green practices</li>
+                <li>Supports vulnerable communities</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4: Penalties -->
+        <div class="col-md-6 col-lg-4">
+          <div class="mitigation-card card p-3">
+            <img src="https://images.unsplash.com/photo-1600166898709-e71ae99c4b1b?w=800" alt="Penalties" />
+            <div class="card-body">
+              <i class="bi bi-exclamation-octagon"></i>
+              <h5 class="card-title mt-2">Penalties</h5>
+              <ul>
+                <li>Fines for harmful actions</li>
+                <li>Discourages environmental damage</li>
+                <li>Strengthens policy enforcement</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5: Persuasion -->
+        <div class="col-md-6 col-lg-4">
+          <div class="mitigation-card card p-3">
+            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800" alt="Persuasion" />
+            <div class="card-body">
+              <i class="bi bi-megaphone"></i>
+              <h5 class="card-title mt-2">Persuasion</h5>
+              <ul>
+                <li>Education and awareness campaigns</li>
+                <li>Encourages voluntary behavior change</li>
+                <li>Promotes sustainable choices</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="adaptation-section">
+    <h1>Adaptation & Resilience</h1>
+    <p class="section-desc">
+      Adaptation and resilience are essential for building strong communities
+      that can withstand the impacts of climate change and other disruptions.
+      By planning ahead and implementing effective strategies, communities can
+      protect lives, secure resources, support economic stability, and
+      maintain vital ecosystems. Adaptation ensures that people and
+      infrastructures remain safe, while resilience strengthens a community’s
+      ability to recover, rebuild, and thrive even after major challenges.
+    </p>
+
+    <div class="container">
+      <div class="row g-4">
+        <!-- 1: Protecting Lives and Property -->
+        <div class="col-md-6 col-lg-4">
+          <div class="resilience-card card p-3 show">
+            <i class="bi bi-shield-fill-check"></i>
+            <h5 class="card-title mt-2">Protecting Lives and Property</h5>
+            <p>
+              Early warning systems, emergency preparedness, and resilient
+              planning reduce casualties and damage during climate-related
+              disasters.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2: Enhancing Economic Stability -->
+        <div class="col-md-6 col-lg-4">
+          <div class="resilience-card card p-3 show">
+            <i class="bi bi-cash-stack"></i>
+            <h5 class="card-title mt-2">Enhancing Economic Stability</h5>
+            <p>
+              Climate-resilient infrastructure lowers long-term recovery
+              costs. Every $1 invested in resilience can save over $13 in
+              rebuilding expenses.
+            </p>
+          </div>
+        </div>
+
+        <!-- 3: Securing Food and Water Systems -->
+        <div class="col-md-6 col-lg-4">
+          <div class="resilience-card card p-3 show">
+            <i class="bi bi-droplet-half"></i>
+            <h5 class="card-title mt-2">Securing Food and Water Systems</h5>
+            <p>
+              Drought-resistant crops, climate-smart agriculture, and
+              rainwater harvesting ensure continued access to essential
+              resources during extreme weather.
+            </p>
+          </div>
+        </div>
+
+        <!-- 4: Building Climate-Resilient Infrastructure -->
+        <div class="col-md-6 col-lg-4">
+          <div class="resilience-card card p-3 show">
+            <i class="bi bi-building"></i>
+            <h5 class="card-title mt-2">
+              Building Climate-Resilient Infrastructure
+            </h5>
+            <p>
+              Designing power, water, and transportation systems with future
+              climate risks in mind prevents costly service disruptions.
+            </p>
+          </div>
+        </div>
+
+        <!-- 5: Fostering Social Cohesion -->
+        <div class="col-md-6 col-lg-4">
+          <div class="resilience-card card p-3 show">
+            <i class="bi bi-people-fill"></i>
+            <h5 class="card-title mt-2">Fostering Social Cohesion</h5>
+            <p>
+              Community-led resilience planning builds stronger social bonds,
+              empowers local voices, and ensures solutions fit the community’s
+              needs.
+            </p>
+          </div>
+        </div>
+
+        <!-- 6: Supporting Policy and Planning -->
+        <div class="col-md-6 col-lg-4">
+          <div class="resilience-card card p-3 show">
+            <i class="bi bi-file-earmark-text"></i>
+            <h5 class="card-title mt-2">Supporting Policy and Planning</h5>
+            <p>
+              Local resilience plans and national adaptation strategies help
+              guide investments, align government efforts, and provide
+              long-term roadmaps for action.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="local-actions-section">
+    <h1>Individual & Local Actions</h1>
+    <p class="section-desc">
+      Everyone can help address local and global challenges through individual
+      actions and community involvement, which collectively build momentum for
+      systemic change. Local knowledge is essential for creating effective,
+      context-specific solutions for a range of issues, from environmental
+      protection to social well-being.
+    </p>
+
+    <h2 class="subheading">Individual Actions for a Healthy Planet</h2>
+    <div class="container">
+      <div class="row g-4">
+        <!-- Reduce, Reuse, Recycle -->
+        <div class="col-md-6 col-lg-4">
+          <div class="action-card card p-3 show">
+            <i class="bi bi-arrow-repeat action-icon"></i>
+            <h5 class="card-title mt-2">Reduce, Reuse, Recycle</h5>
+            <p>
+              Cut down on waste, compost food scraps, and recycle paper,
+              glass, plastic, and electronics.
+            </p>
+          </div>
+        </div>
+
+        <!-- Conserve Energy -->
+        <div class="col-md-6 col-lg-4">
+          <div class="action-card card p-3 show">
+            <i class="bi bi-lightning-charge-fill action-icon"></i>
+            <h5 class="card-title mt-2">Conserve Energy</h5>
+            <p>
+              Use energy-efficient bulbs, turn off lights, and unplug
+              electronics when not in use.
+            </p>
+          </div>
+        </div>
+
+        <!-- Sustainable Transport -->
+        <div class="col-md-6 col-lg-4">
+          <div class="action-card card p-3 show">
+            <i class="bi bi-bicycle action-icon"></i>
+            <h5 class="card-title mt-2">Choose Sustainable Transport</h5>
+            <p>
+              Walk, bike, or use public transport to reduce CO2 emissions;
+              save car trips for when necessary.
+            </p>
+          </div>
+        </div>
+
+        <!-- Eat Wisely -->
+        <div class="col-md-6 col-lg-4">
+          <div class="action-card card p-3 show">
+            <i class="bi bi-egg-fried action-icon"></i>
+            <h5 class="card-title mt-2">Eat Wisely</h5>
+            <p>
+              Consider a plant-based diet and make smart seafood choices using
+              resources like Fishwatch.gov.
+            </p>
+          </div>
+        </div>
+
+        <!-- Shop Locally & Wisely -->
+        <div class="col-md-6 col-lg-4">
+          <div class="action-card card p-3 show">
+            <i class="bi bi-bag-heart action-icon"></i>
+            <h5 class="card-title mt-2">Shop Locally & Wisely</h5>
+            <p>
+              Support neighborhood businesses, use reusable bags, and buy
+              fewer new items.
+            </p>
+          </div>
+        </div>
+
+        <!-- Conserve Water -->
+        <div class="col-md-6 col-lg-4">
+          <div class="action-card card p-3 show">
+            <i class="bi bi-droplet action-icon"></i>
+            <h5 class="card-title mt-2">Conserve Water</h5>
+            <p>
+              Fix leaky faucets and reduce water usage to protect local
+              waterways.
+            </p>
+          </div>
+        </div>
+
+        <!-- Avoid Toxic Chemicals -->
+        <div class="col-md-6 col-lg-4">
+          <div class="action-card card p-3 show">
+            <i class="bi bi-bug action-icon"></i>
+            <h5 class="card-title mt-2">Avoid Toxic Chemicals</h5>
+            <p>
+              Choose non-toxic products at home and work to prevent pollution
+              of water and soil.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="subheading mt-5">Local Actions for Stronger Communities</h2>
+    <div class="container">
+      <div class="row g-4">
+        <!-- Volunteer -->
+        <div class="col-md-6 col-lg-4">
+          <div class="action-card card p-3 show">
+            <i class="bi bi-people-fill action-icon"></i>
+            <h5 class="card-title mt-2">Volunteer</h5>
+            <p>
+              Participate in park cleanups, food banks, or educational
+              programs. Use platforms like Idealist or VolunteerMatch.
+            </p>
+          </div>
+        </div>
+
+        <!-- Plant Trees -->
+        <div class="col-md-6 col-lg-4">
+          <div class="action-card card p-3 show">
+            <i class="bi bi-tree-fill action-icon"></i>
+            <h5 class="card-title mt-2">Plant Trees</h5>
+            <p>
+              Organize tree-planting events to clean the air, save energy, and
+              combat climate change.
+            </p>
+          </div>
+        </div>
+
+        <!-- Advocate for Green Policies -->
+        <div class="col-md-6 col-lg-4">
+          <div class="action-card card p-3 show">
+            <i class="bi bi-megaphone action-icon"></i>
+            <h5 class="card-title mt-2">Advocate for Green Policies</h5>
+            <p>
+              Attend city council meetings, sign petitions, and push for
+              sustainability policies.
+            </p>
+          </div>
+        </div>
+
+        <!-- Support Local Initiatives -->
+        <div class="col-md-6 col-lg-4">
+          <div class="action-card card p-3 show">
+            <i class="bi bi-geo-alt-fill action-icon"></i>
+            <h5 class="card-title mt-2">Support Local Initiatives</h5>
+            <p>
+              Start or contribute to community gardens to provide fresh food
+              and foster connection.
+            </p>
+          </div>
+        </div>
+
+        <!-- Promote Safety -->
+        <div class="col-md-6 col-lg-4">
+          <div class="action-card card p-3 show">
+            <i class="bi bi-shield-fill-exclamation action-icon"></i>
+            <h5 class="card-title mt-2">Promote Safety</h5>
+            <p>
+              Advocate for better lighting, crosswalks, and speed bumps to
+              protect pedestrians.
+            </p>
+          </div>
+        </div>
+
+        <!-- Emergency Preparedness -->
+        <div class="col-md-6 col-lg-4">
+          <div class="action-card card p-3 show">
+            <i class="bi bi-lightning-fill action-icon"></i>
+            <h5 class="card-title mt-2">Emergency Preparedness</h5>
+            <p>
+              Join local disaster response teams like CERT to prepare for and
+              respond to natural disasters.
+            </p>
+          </div>
+        </div>
+
+        <!-- Stay Informed -->
+        <div class="col-md-6 col-lg-4">
+          <div class="action-card card p-3 show">
+            <i class="bi bi-book-fill action-icon"></i>
+            <h5 class="card-title mt-2">Stay Informed</h5>
+            <p>
+              Elect leaders who support sustainable and equitable community
+              development.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const cards = document.querySelectorAll(".mitigation-card");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      cards.forEach((card) => observer.observe(card));
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
