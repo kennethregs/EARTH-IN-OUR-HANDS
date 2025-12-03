@@ -17,7 +17,6 @@ body {
     --earth-brown: #8A6E45;     /* Earth soil tone */
 }
 
-
 header {
   position: fixed;
   top: 0;
@@ -46,6 +45,7 @@ header.scrolled {
 .logo:hover {
   text-decoration: underline;
   color: #A8D5FF;
+  cursor: pointer;
 }
 
 nav {
