@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Student Hub CDO — Admin Tracker</title>
+    <style>
+      :root {
+        --bg: #0e1625;
+        --card: #111b2e;
+        --accent: #4ea9ff;
+        --success: #34d399;
+        --danger: #ef4444;
+        --muted: #94a3b8;
+      }
+      body {
+        margin: 0;
+        padding: 20px;
+        font-family: Inter, system-ui;
+        background: linear-gradient(180deg, #061022, #0a1526);
+        color: #e8eef8;
+      }
+      h1 {
+        font-size: 22px;
+        margin: 0 0 12px;
+        font-weight: 600;
+        color: #4ea9ff;
+      }
+      .wrap {
+        max-width: 900px;
+        margin: auto;
+      }
+      .card {
+        background: var(--card);
+        padding: 18px;
+        border-radius: 12px;
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.45);
+      }
+      label {
+        display: block;
+        font-size: 13px;
+        color: var(--muted);
+        margin-bottom: 4px;
+        margin-top: 8px;
+      }
+      input,
+      select,
+      button {
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: #0a1220;
+        color: #e8eef8;
+        width: 100%;
+        font-size: 14px;
+      }
+      button {
+        cursor: pointer;
+        width: auto;
+      }
+      .row {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+      }
+      .col {
+        flex: 1;
+        min-width: 200px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 14px;
+      }
+      th,
+      td {
+        padding: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        font-size: 14px;
+      }
+      th {
+        color: var(--muted);
+        font-weight: 500;
+      }
+      .btn-small {
+        padding: 6px 10px;
+        font-size: 12px;
+      }
+      .btn-danger {
+        background: var(--danger);
+      }
+      .btn-accent {
+        background: var(--accent);
+      }
+      .btn-edit {
+        background: #f59e0b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>Student Hub CDO — Admin Time Tracker</h1>
+      <div class="card">
+        <form id="trackerForm">
+          <div class="row">
+            <div class="col">
+              <label>Name</label>
+              <input id="name" placeholder="Full name" required />
+            </div>
+            <div class="col">
+              <label>Time In</label>
+              <input id="timeIn" type="datetime-local" required />
+            </div>
+            <div class="col">
+              <label>End Date</label>
+              <input id="endDate" type="date" required />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label>Inventory Check</label>
+              <select id="inventory">
+                <option value="monthly">Monthly</option>
+                <option value="weekly">Weekly</option>
+              </select>
+            </div>
+            <div class="col">
+              <label>Income Status</label>
+              <select id="income">
+                <option value="same">Same</option>
+                <option value="increased">Increased</option>
+                <option value="decreased">Decreased</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit">Add to List</button>
+        </form>
+
+        <table id="dataTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Time In</th>
+              <th>End</th>
+              <th>Inventory</th>
+              <th>Income</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script>
+      let entries = [];
+      let editingIndex = -1;
+
+      function render() {
+        const tbody = document.querySelector("#dataTable tbody");
+        tbody.innerHTML = "";
+        entries.forEach((e, i) => {
+          const tr = document.createElement("tr");
+          tr.innerHTML = `
+      <td>${e.name}</td>
+      <td>${new Date(e.timeIn).toLocaleString()}</td>
+      <td>${e.endDate}</td>
+      <td>${e.inventory}</td>
+      <td>${e.income}</td>
+      <td>
+        <button class="btn-small btn-edit" onclick="editItem(${i})">Edit</button>
+        <button class="btn-small btn-danger" onclick="deleteItem(${i})">Delete</button>
+      </td>
+    `;
+          tbody.appendChild(tr);
+        });
+      }
+
+      trackerForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const name = document.getElementById("name").value;
+        const timeIn = document.getElementById("timeIn").value;
+        const endDate = document.getElementById("endDate").value;
+        const inventory = document.getElementById("inventory").value;
+        const income = document.getElementById("income").value;
+
+        const data = { name, timeIn, endDate, inventory, income };
+
+        if (editingIndex >= 0) {
+          entries[editingIndex] = data;
+          editingIndex = -1;
+        } else {
+          entries.push(data);
+        }
+        trackerForm.reset();
+        render();
+      });
+
+      function deleteItem(i) {
+        entries.splice(i, 1);
+        render();
+      }
+
+      function editItem(i) {
+        const e = entries[i];
+        editingIndex = i;
+        document.getElementById("name").value = e.name;
+        document.getElementById("timeIn").value = e.timeIn;
+        document.getElementById("endDate").value = e.endDate;
+        document.getElementById("inventory").value = e.inventory;
+        document.getElementById("income").value = e.income;
+      }
+    </script>
+  </body>
+</html>
