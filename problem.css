@@ -1,0 +1,152 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* BODY */
+body {
+  background: #f5f9f0;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* HEADER */
+#navbar {
+  background: #2f5d37;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+#nav-menu a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#nav-menu a:hover,
+#nav-menu a.active {
+  color: #b7ffbe;
+}
+
+/* SECTION TITLE */
+#problems-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#problems-section h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #2f5d37;
+}
+
+.section-desc {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  font-size: 17px;
+  color: #555;
+}
+
+/* CARD STYLE */
+.mitigation-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+  background: #ffffff;
+  transition: transform 0.25s ease;
+}
+
+.mitigation-card:hover {
+  transform: translateY(-5px);
+}
+
+.mitigation-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 15px;
+  text-align: left;
+}
+
+.card-body i {
+  font-size: 30px;
+  color: #2f5d37;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 8px;
+  color: #2f5d37;
+}
+
+.card-body ul {
+  margin-top: 10px;
+  padding-left: 18px;
+}
+
+.card-body ul li {
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  #nav-menu {
+    display: none;
+  }
+}
+
+/* MAP SECTION */
+#map-section {
+  padding: 60px 20px;
+  background: #eef5ea;
+  text-align: center;
+}
+
+#map-section h2 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #2f5d37;
+  margin-bottom: 10px;
+}
+
+#environment-map {
+  height: 450px;
+  max-width: 1000px;
+  margin: 30px auto 0;
+  border-radius: 14px;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.2);
+}
+/* MAP ↔ CARD CONNECTION */
+.mitigation-card {
+  cursor: pointer;
+}
+
+.mitigation-card.active-problem {
+  outline: 4px solid #2f5d37;
+  transform: scale(1.03);
+  transition: 0.3s ease;
+}
